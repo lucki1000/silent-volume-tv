@@ -26,17 +26,7 @@ The bridge forwards supported remote keys to the TV over Bluetooth. Volume up
 and down go to the Android app over the local network instead, so Android
 doesn't receive the usual volume key events.
 
-```mermaid
-flowchart LR
-    Remote[Bluetooth remote] -->|BLE HID| ESP[ESP32 bridge]
-    ESP -->|Other supported HID keys over BLE| TV[Android TV]
-    ESP -->|Volume up/down: authenticated HTTP over Wi-Fi| App[Silent Volume TV app]
-    App -->|Media volume; optional small overlay| TV
-```
-
-<img src="docs/images/volume-overlay.png" alt="Compact volume overlay showing volume 17" width="72">
-
-A closer look at the custom overlay.
+![The remote connects to the ESP32 over Bluetooth. Other supported keys go to the TV over Bluetooth; volume commands go over Wi-Fi and HTTP to the Android app running on the TV.](docs/images/architecture.svg)
 
 ## App settings on the TV
 

@@ -2,6 +2,7 @@
 
 | File | Purpose |
 | --- | --- |
+| `architecture.svg` | Remote, ESP32 and TV connections, including the app running on the TV |
 | `volume-before.png` | Original PEAQ system bar across the bottom center |
 | `volume-after.png` | Custom right-side overlay with both projects running |
 | `app-settings-redacted.png` | Actual Android settings screen; API token permanently covered |
