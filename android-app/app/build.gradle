@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.silentvolume.tv'
+    compileSdk 30
+    buildToolsVersion '34.0.0'
+
+    defaultConfig {
+        applicationId 'dev.silentvolume.tv'
+        minSdk 30
+        targetSdk 30
+        versionCode 6
+        versionName '1.5'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint {
+        // This project is for private installation on Android 11 TVs, not Play publication.
+        disable 'ExpiredTargetSdkVersion'
+    }
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.all {
+            systemProperty 'silentvolume.preview.dir', project.layout.buildDirectory.dir('outputs/preview').get().asFile.absolutePath
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.14.1'
+}

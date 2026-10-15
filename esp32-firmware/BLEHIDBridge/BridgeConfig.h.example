@@ -1,0 +1,27 @@
+#pragma once
+#include <cstdint>
+
+namespace bridgeconfig {
+// Remote selection: use its Bluetooth address for direct connection, or leave
+// the address empty to scan for SOURCE_NAME. Both empty = first HID peripheral.
+// Keep device addresses in this local header, outside published source.
+static constexpr char SOURCE_NAME[] = "RC860G";
+static constexpr char SOURCE_ADDRESS[] = "";
+// 0 = public, 1 = random, 0xFF = try public, then random.
+static constexpr uint8_t SOURCE_ADDRESS_TYPE = 0xFF;
+
+// Fill these locally, then upload with flash erasure disabled.
+// ESP32-WROOM-32D uses a 2.4 GHz Wi-Fi network.
+static constexpr char WIFI_SSID[] = "";
+static constexpr char WIFI_PASSWORD[] = "";
+static constexpr char TV_IP[] = ""; // IPv4 only, e.g. "192.168.1.50"; no http:// or port.
+static constexpr char API_TOKEN[] = ""; // Token only; the code adds "Bearer ".
+static constexpr uint16_t TV_HTTP_PORT = 8090;
+
+// 0 disables held-key HTTP repeats; initial presses always send a request.
+static constexpr uint32_t VOLUME_REPEAT_MS = 200;
+static constexpr uint32_t VOLUME_MAX_AGE_MS = 2000;
+static constexpr uint32_t WIFI_RETRY_MS = 10000;
+static constexpr int32_t HTTP_CONNECT_TIMEOUT_MS = 1000;
+static constexpr uint16_t HTTP_READ_TIMEOUT_MS = 1500;
+} // namespace bridgeconfig

@@ -1,0 +1,56 @@
+# Local Android SDK, caches and generated output
+.gradle/
+.android-sdk/
+.build-support/
+.cxx/
+.externalNativeBuild/
+.kotlin/
+**/build/
+local.properties
+.idea/
+*.iml
+.vscode/
+
+# Local configuration, credentials and signing keys
+BridgeConfig.h
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.key
+*.p12
+*.pfx
+# Original TV settings screenshot contains the live API token.
+android_app_screenshot.png
+
+# Compiled applications, firmware and device backups
+*.apk
+*.aab
+*.apks
+*.xapk
+*.bin
+*.elf
+*.hex
+*.uf2
+*.o
+*.a
+*.so
+*.map
+*.dump
+*.nvs
+*.backup
+*.blehidbridge-original
+
+# Serial captures and temporary files
+*.log
+*.log.*
+*.fifo
+__pycache__/
+*.py[cod]
+.pio/
+.DS_Store
+*.bak
+*.swp
+*~

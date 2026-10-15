@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="48dp" android:paddingEnd="48dp"
+        android:paddingTop="28dp" android:paddingBottom="28dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/app_name" android:textSize="30sp" android:textColor="#74D5C5" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/intro" android:textSize="18sp" android:layout_marginBottom="12dp" />
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="18sp" />
+        <TextView android:id="@+id/boot_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" />
+        <TextView android:id="@+id/volume" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="18sp" />
+        <TextView android:id="@+id/address" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="18sp" android:textIsSelectable="true" android:layout_marginTop="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start" />
+            <Button android:id="@+id/stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop" />
+        </LinearLayout>
+        <CheckBox android:id="@+id/autostart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autostart" />
+        <CheckBox android:id="@+id/show_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/show_overlay" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/overlay_position" />
+        <RadioGroup android:id="@+id/overlay_position" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/overlay_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_right" />
+            <RadioButton android:id="@+id/overlay_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_left" />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/overlay_size" />
+        <RadioGroup android:id="@+id/overlay_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/overlay_size_75" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_size_75" />
+            <RadioButton android:id="@+id/overlay_size_100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_size_100" />
+            <RadioButton android:id="@+id/overlay_size_125" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_size_125" />
+            <RadioButton android:id="@+id/overlay_size_150" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overlay_size_150" />
+        </RadioGroup>
+        <TextView android:id="@+id/overlay_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" />
+        <Button android:id="@+id/allow_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/allow_overlay" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/port_label" android:labelFor="@id/port" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/port" android:layout_width="140dp" android:layout_height="wrap_content"
+                android:inputType="number" android:maxLength="5" android:singleLine="true" android:importantForAutofill="no" />
+            <Button android:id="@+id/save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/token_label" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/token" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="18sp" android:fontFamily="monospace" android:textIsSelectable="true" />
+        <Button android:id="@+id/rotate_token" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rotate_token" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/example" android:textSize="16sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/volume_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volume_down" />
+            <Button android:id="@+id/volume_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volume_up" />
+        </LinearLayout>
+        <Button android:id="@+id/battery_settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/battery_settings" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notes" android:textSize="16sp" android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
